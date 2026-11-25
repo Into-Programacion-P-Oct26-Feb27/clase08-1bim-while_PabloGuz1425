@@ -22,7 +22,7 @@ public class Ejemplo051 {
 
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
-        
+
         String nombre;
         String apellido;
         int limite = 3;
@@ -33,17 +33,16 @@ public class Ejemplo051 {
         double calificacion;
 
         String cadena_final = "Los Datos del estudiante son:\n";
-        
+
         System.out.println("Ingrese los nombres del estudiante");
         nombre = entrada.nextLine();
+        cadena_final = String.format("%sNombres del estudiante son: %s\n",
+                cadena_final, nombre);
         System.out.println("Ingrese los apellidos del estudiante");
         apellido = entrada.nextLine();
-        cadena_final = String.format("%sLos Nombres del estudiante son: %s\n",
-                cadena_final, nombre);
-        cadena_final = String.format("%sLos Apellidos del estudiante son: %s\n",
+        cadena_final = String.format("%sApellidos del estudiante son: %s\n",
                 cadena_final, apellido);
-        
-        
+
         System.out.println("Ingrese las notas de los estudiantes de su "
                 + "materia");
 
@@ -52,19 +51,19 @@ public class Ejemplo051 {
                     + "número %d\n", contador);
             calificacion = entrada.nextDouble();
             cadena_final = String.format("%s %.1f\n",
-                cadena_final, calificacion);
+                    cadena_final, calificacion);
             suma_total = suma_total + calificacion;
             // contador
             contador = contador + 1;
         }
         cadena_final = String.format("%sLa suma de notas es: %.1f\n",
                 cadena_final, suma_total);
-        
+
         promedio_final = suma_total / limite;
-        
+
         cadena_final = String.format("%sPromedio es: %.2f\n",
                 cadena_final, promedio_final);
-      
+
         //System.out.printf("El promedio final es %f\n", promedio_final);
         System.out.printf("%s\n", cadena_final);
     }
