@@ -32,3 +32,7 @@ public class Ejemplo061 {
         
     }
 }
+/*
+Poder delimitar un valor escrito por teclado con el cual se va a poder salir de
+el ciclo.
+*/
